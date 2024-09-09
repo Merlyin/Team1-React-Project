@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
 import { signInUser } from '../../api';
+import logo from '../../Images/logo.png';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await signInUser(email, password);
-      localStorage.setItem('token', response.token); 
+      localStorage.setItem('token', response.token);
       navigate('/dashboard');
     } catch (err) {
       setError(err.message);
@@ -26,18 +27,19 @@ const Login = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.loginBox}>
-        <h2>Money Guard</h2>
+        <img src={logo} alt="Money Guard Logo" className={styles.logo} />{' '}
         <form className={styles.loginForm} onSubmit={handleSubmit}>
           <input
             type="email"
-            placeholder="E-mail"
+            placeholder="✉️  E-mail"
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
           />
+
           <input
             type="password"
-            placeholder="Password"
+            placeholder="🔒  Password"
             value={password}
             onChange={e => setPassword(e.target.value)}
             required

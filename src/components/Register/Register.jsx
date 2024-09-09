@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Register.module.css';
 import { signUpUser } from '../../api';
+import logo from '../../Images/logo.png';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -32,32 +33,32 @@ const Register = () => {
   return (
     <div className={styles.registerContainer}>
       <div className={styles.registerBox}>
-        <h2>Money Guard</h2>
+        <img src={logo} alt="Money Guard Logo" className={styles.logo} />{' '}
         <form className={styles.registerForm} onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Name"
+            placeholder="👤  Name"
             value={name}
             onChange={e => setName(e.target.value)}
             required
           />
           <input
             type="email"
-            placeholder="E-mail"
+            placeholder="✉️  E-mail"
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="🔒  Password"
             value={password}
             onChange={e => setPassword(e.target.value)}
             required
           />
           <input
             type="password"
-            placeholder="Confirm password"
+            placeholder="🔒  Confirm password"
             value={confirmPassword}
             onChange={e => setConfirmPassword(e.target.value)}
             required
