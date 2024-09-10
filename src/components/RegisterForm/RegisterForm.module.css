@@ -1,4 +1,4 @@
-.loginContainer {
+.registerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,21 +8,29 @@
   background-position: center;
   z-index: 1;
   position: relative;
-  background-image: url('../../Images/login-main-desc-bg.png');
+  background-image: url(../../Images/singin-main-desc-bg.png);
 }
-
-.loginBox {
+.registerForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+.registerBox {
   background-color: rgba(0, 0, 0, 0.1);
-  padding: 40px;
+  padding: 30px;
   width: 533px;
   height: auto;
   flex-shrink: 0;
   border-radius: 8px;
   box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.loginBox h2 {
+.registerBox h2 {
   color: #fbfbfb;
   font-family: Poppins;
   font-size: 26.963px;
@@ -31,7 +39,7 @@
   line-height: normal;
 }
 
-.loginBox input {
+.registerBox input {
   width: 400px;
   margin: 20px 0;
   padding: 15px;
@@ -42,21 +50,40 @@
   border-left: none;
   box-shadow: none;
   border-color: rgba(255, 255, 255, 0.4);
-}
-.loginBox input::placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px;
   color: rgba(255, 255, 255, 0.6);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  line-height: normal;
 }
-
-.loginForm {
-  display: column;
-  justify-content: center;
-  align-items: center;
+.registerBox input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.loginButton {
+.emailInput::placeholder {
+  background-image: url('/src/Images/email.svg');
+  background-repeat: no-repeat;
+}
+.passwordInput::placeholder {
+  background-image: url(/src/Images/password.svg);
+  background-repeat: no-repeat;
+}
+.userInput::placeholder {
+  background-image: url(/src/Images/user.svg);
+  background-repeat: no-repeat;
+}
+.registerButton {
   width: 300px;
   height: 50px;
   padding: 12px;
@@ -79,10 +106,10 @@
   letter-spacing: 1.8px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  margin-top: 50px;
+  margin-top: 30px;
   cursor: pointer;
 }
-.registerButton {
+.loginButton {
   width: 300px;
   height: 50px;
   padding: 12px;
@@ -101,4 +128,12 @@
   letter-spacing: 1.8px;
   text-transform: uppercase;
   margin-top: 20px;
+}
+.error {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
