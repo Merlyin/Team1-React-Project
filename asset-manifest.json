@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/Team1-React-Project/static/css/main.3b4711e2.css",
-    "main.js": "/Team1-React-Project/static/js/main.65ce3395.js",
-    "static/media/login-main-desc-bg.png": "/Team1-React-Project/static/media/login-main-desc-bg.1c6bb303bfa9527353ff.png",
-    "static/media/singin-main-desc-bg.jpg": "/Team1-React-Project/static/media/singin-main-desc-bg.a53bf41b62193fb8135d.jpg",
+    "main.css": "/Team1-React-Project/static/css/main.1328e53f.css",
+    "main.js": "/Team1-React-Project/static/js/main.d57a4abd.js",
+    "static/media/singin-main-desc-bg.png": "/Team1-React-Project/static/media/singin-main-desc-bg.d04b71e8fdb608efd32a.png",
+    "static/media/login-main-desc-bg.png": "/Team1-React-Project/static/media/login-main-desc-bg.e847096ca794066ec9c2.png",
     "index.html": "/Team1-React-Project/index.html",
-    "main.3b4711e2.css.map": "/Team1-React-Project/static/css/main.3b4711e2.css.map",
-    "main.65ce3395.js.map": "/Team1-React-Project/static/js/main.65ce3395.js.map"
+    "static/media/user.svg": "/Team1-React-Project/static/media/user.a79f90ab87ee9668cce6.svg",
+    "static/media/password.svg": "/Team1-React-Project/static/media/password.2e9ae27f0a8207f9b6c0.svg",
+    "static/media/email.svg": "/Team1-React-Project/static/media/email.9e5bc928e4ee81d76c90.svg",
+    "main.1328e53f.css.map": "/Team1-React-Project/static/css/main.1328e53f.css.map",
+    "main.d57a4abd.js.map": "/Team1-React-Project/static/js/main.d57a4abd.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b4711e2.css",
-    "static/js/main.65ce3395.js"
+    "static/css/main.1328e53f.css",
+    "static/js/main.d57a4abd.js"
   ]
 }
