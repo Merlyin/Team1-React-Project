@@ -1,20 +1,47 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Login/Login';
-import Register from './Register/Register';
-import './App.css';
 
-function App() {
+import { Routes, Route } from 'react-router-dom';
+import PublicRoute from '../routesConfig/PublicRoute';
+import PrivateRoute from '../routesConfig/PrivateRoute';
+import RegisterForm from '../pages/RegisterPage';
+import LoginForm from '../pages/LoginPage';
+import MainLayout from './MainLayout/MainLayout';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { refreshThunk } from '../redux/auth/operations';
+
+export const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(refreshThunk());
+  }, [dispatch]);
+
   return (
-    <Router basename="/Team1-React-Project">
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </div>
-    </Router>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <PrivateRoute>
+            <MainLayout />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/register"
+        element={
+          <PublicRoute>
+            <RegisterForm />
+          </PublicRoute>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <PublicRoute>
+            <LoginForm />
+          </PublicRoute>
+        }
+      />
+    </Routes>
   );
-}
-
-export default App;
+};
