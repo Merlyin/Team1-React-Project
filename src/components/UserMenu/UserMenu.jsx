@@ -11,7 +11,7 @@ export const UserMenu = () => {
   const handleLogout = async () => {
     try {
       await dispatch(logout());
-      window.location.href="/goit-react-hw-08-phonebook";
+      window.location.href="/login";
     } catch (error) {
       console.error('Logout failed:', error.message);
     }

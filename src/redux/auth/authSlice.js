@@ -1,5 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { loginThunk, registerThunk, refreshThunk } from './operations';
+import { selectIsLoggedIn, selectUser, selectIsRefreshing, loginThunk, registerThunk, refreshThunk } from './operations';
+import { useSelector } from 'react-redux';
+
+export const useAuth = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const user = useSelector(selectUser);
+  const isRefreshing = useSelector(selectIsRefreshing);
+
+  return { isLoggedIn, user, isRefreshing };
+};
+
 
 const initialState = {
   user: null,
